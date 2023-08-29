@@ -1,0 +1,27 @@
+def demonstrate_set_equivalence(A, B, x):
+    # Check if x belongs to both A and B
+    if x in A and x in B:
+        print(f"{x} is in both A and B.")
+    else:
+        print(f"{x} is not in both A and B.")
+
+
+    if x in A - B:
+        print(f"{x} is in A\B.")
+    else:
+        print(f"{x} is not in A\B.")
+
+
+    if x in A.intersection(B.symmetric_difference(set(A))):
+        print(f"{x} is in A ∩ B^c.")
+    else:
+        print(f"{x} is not in A ∩ B^c.")
+
+
+A = {10, 20, 30, 40, 50}
+B = {40, 50, 60, 70, 80}
+
+
+x = 40
+
+demonstrate_set_equivalence(A, B, x)
